@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electron App with webview</title>
+  <style>
+    /* Make sure all parent elements have 100% height */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Make webview take full space */
+    webview {
+      flex: 1;
+      border: none;
+      display: inline-flex; /* This can help with rendering in Electron */
+    }
+  </style>
+</head>
+<body>
+  <webview src="https://e2b.dev" nodeintegration allowpopups></webview>
+</body>
+</html>
